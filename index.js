@@ -1,14 +1,21 @@
-function writeCards(names, eventName) {
-    const messages = [];
-  
-    for (let count = 0; count < names.length; count++) {
-      const message = `Thank you, ${names[count]}, for the wonderful ${eventName} gift!`;
-      messages.push(message);
-    }
-  
-    return messages;
+function writeCards(names,eventName){
+  const message = []
+  for (let i=0;i<names.length; i++){
+    message.push(`Thank you, ${names[i]}, for the wonderful ${eventName} gift!`);
+  }
+  return message;
 }
-function countDown(){
-    if (count !==0)
-    console.log(count);
+
+function countDown(number) {
+  if (number < 1) {
+    console.log("Please provide a positive integer.");
+    return;
+  }
+
+  while (number >= 0) {
+    console.log(number);
+    number--;
+  }
 }
+
+
